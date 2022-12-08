@@ -3,11 +3,17 @@ import '../styles/App.css';
 
 const App = () => {
 //code here 
-  return (
+  const [isActive, setActive] = useState(false);
+
+    const toggleClass = () => {
+        setActive(!isActive);
+    };
+  return ( <>
     <div id="main">
-      <p className={} >Newton School</p>
-      <button id='button' onClick={}>Change Style</button>
+      <p className={isActive ? 'redColor ' : 'blueColor'} >Newton School</p>
+      <button id='button' onClick={toggleClass}>Change Style</button>
     </div>
+  </>
   )
 }
 
